@@ -18,10 +18,10 @@ export const Contact = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
-            { icon: Phone, title: "Telefone", lines: ["+244 900 000 000"], href: "tel:+244900000000" },
-            { icon: Mail, title: "Email", lines: ["info@mutxutxu.com"], href: "mailto:info@mutxutxu.com" },
-            { icon: MapPin, title: "Endereço", lines: ["Rua Principal", "Mutxutxu"] },
-            { icon: Clock, title: "Horário", lines: ["Todos os dias", "12:00 - 23:00"] },
+            { icon: Phone, title: "Telefone", lines: ["+258 87 781 0419"], href: "sms:+258877810419" },
+            { icon: Mail, title: "Email", lines: ["mutxutxu@gmail.com"], href: "mailto:mutxutxu@gmail.com" },
+            { icon: MapPin, title: "Endereço", lines: ["Bairro Masenjere", "Perto da Escola Eduardo"] },
+            { icon: Clock, title: "Horário", lines: ["Todos os dias 10h - 23h", "(Exceto segunda-feira)"] },
           ].map((c) => {
             const Wrapper: any = c.href ? "a" : "div";
             return (
@@ -51,10 +51,10 @@ export const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="xl" asChild>
-              <a href="tel:+244900000000">Ligar Agora</a>
+              <a href="tel:+258877810419">Ligar Agora</a>
             </Button>
             <Button variant="outlineHero" size="xl" asChild>
-              <a href="https://wa.me/244900000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="https://wa.me/258825516853" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </Button>
           </div>
           <div className="flex justify-center gap-4 mt-8">
