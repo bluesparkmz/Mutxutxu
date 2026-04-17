@@ -57,13 +57,13 @@ export const Residence = () => {
                 <a href="#contacto">Reservar Quarto</a>
               </Button>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {amenities.map((a) => (
                 <div key={a.label} className="flex items-center gap-3 bg-background rounded-lg p-3 shadow-soft">
-                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                    <a.icon className="h-4 w-4 text-primary" />
+                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                    <a.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <span className="text-sm font-medium">{a.label}</span>
+                  <span className="text-sm font-medium leading-tight">{a.label}</span>
                 </div>
               ))}
             </div>

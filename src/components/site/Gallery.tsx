@@ -26,19 +26,19 @@ export const Gallery = () => {
           <p className="text-muted-foreground text-lg">Veja um pouco da nossa atmosfera única.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {images.map((img, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl overflow-hidden shadow-soft group cursor-pointer ${i === 0 || i === 4 ? "md:row-span-2" : ""}`}
+              className="relative rounded-2xl overflow-hidden shadow-soft group cursor-pointer aspect-square"
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className={`w-full object-cover group-hover:scale-110 transition-smooth duration-700 ${i === 0 || i === 4 ? "h-full min-h-[400px]" : "h-48 md:h-56"}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth flex items-end p-5">
-                <span className="text-primary-foreground font-display text-xl font-bold">{img.label}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-60 md:opacity-0 group-hover:opacity-100 transition-smooth flex items-end p-4">
+                <span className="text-primary-foreground font-display text-base md:text-xl font-bold drop-shadow-lg">{img.label}</span>
               </div>
             </div>
           ))}
