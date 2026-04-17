@@ -1,5 +1,5 @@
 import { Utensils, BedDouble, Waves, Heart } from "lucide-react";
-import wall from "@/assets/wall.jpg";
+import wall from "@/assets/mutxutxu-mural.png";
 
 const features = [
   { icon: Utensils, title: "Gastronomia Autêntica", desc: "Pratos preparados com ingredientes frescos e muito sabor." },
