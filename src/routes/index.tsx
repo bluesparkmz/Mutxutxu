@@ -172,13 +172,14 @@ function HomePage() {
                     className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
                   <div className="flex items-center gap-2 text-primary text-xs uppercase tracking-[0.3em]">
                     <card.icon className="h-4 w-4" /> {card.tag}
                   </div>
-                  <h3 className="mt-3 font-display text-3xl md:text-4xl">{card.title}</h3>
-                  <p className="mt-3 text-foreground/80 max-w-md">{card.desc}</p>
+                  <h3 className="mt-3 font-display text-3xl md:text-4xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">{card.title}</h3>
+                  <p className="mt-3 max-w-md text-white/90 drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">{card.desc}</p>
                   <Link
                     to={card.to}
                     className="mt-6 inline-flex items-center gap-2 text-primary font-medium group/link"
