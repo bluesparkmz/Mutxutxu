@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Star, UtensilsCrossed, BedDouble, Sparkles, ChefHat, Wine, Clock } from "lucide-react";
 import heroImg from "@/assets/hero-restaurant.jpg";
+import dishTilapiaGrelhada from "@/assets/dish-tilapia-grelhada.jpg";
 import dishPrawns from "@/assets/dish-prawns.jpg";
 import dishFish from "@/assets/dish-fish.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
@@ -136,7 +137,7 @@ function HomePage() {
           <div className="mt-20 grid md:grid-cols-2 gap-8">
             {[
               {
-                img: heroImg,
+                img: dishTilapiaGrelhada,
                 tag: "Restaurante",
                 title: "Cozinha de assinatura",
                 desc: "Pratos autorais que celebram o melhor de Moçambique com toques contemporâneos.",
