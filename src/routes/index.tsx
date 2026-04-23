@@ -49,7 +49,7 @@ function HomePage() {
             transition={{ duration: 1 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm text-xs uppercase tracking-[0.3em] text-primary"
           >
-            <Sparkles className="h-3.5 w-3.5" /> Inaugurado em Maputo
+            <Sparkles className="h-3.5 w-3.5" /> Lichinga
           </motion.div>
 
           <motion.h1
@@ -341,10 +341,10 @@ function HomePage() {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
-              href="tel:+258840000000"
+              href="tel:877810419"
               className="px-10 py-5 rounded-full border border-primary/50 text-foreground hover:bg-primary/10 transition-all inline-flex items-center justify-center gap-2"
             >
-              Ligar +258 84 000 0000
+              Ligar 877810419
             </a>
           </div>
         </motion.div>

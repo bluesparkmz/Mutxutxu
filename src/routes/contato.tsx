@@ -2,16 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, UtensilsCrossed, BedDouble, Sparkles } from "lucide-react";
-import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Reservas — Mutxutxu Restaurante & Residência" },
-      { name: "description", content: "Reserve a sua mesa ou suíte no Mutxutxu. Disponibilidade limitada — garanta o seu lugar." },
-      { property: "og:title", content: "Reservas — Mutxutxu" },
-      { property: "og:description", content: "A sua mesa aguarda. A sua suíte também." },
+      { title: "Reservas - Mutxutxu Restaurante & Residencia" },
+      {
+        name: "description",
+        content: "Reserve a sua mesa ou suite no Mutxutxu. Disponibilidade limitada - garanta o seu lugar.",
+      },
+      { property: "og:title", content: "Reservas - Mutxutxu" },
+      { property: "og:description", content: "A sua mesa aguarda. A sua suite tambem." },
     ],
   }),
   component: ContactPage,
@@ -19,10 +20,46 @@ export const Route = createFileRoute("/contato")({
 
 function ContactPage() {
   const [type, setType] = useState<"mesa" | "suite">("mesa");
+  const whatsappNumber = "258825516853";
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") ?? "");
+    const phone = String(formData.get("phone") ?? "");
+    const date = String(formData.get("date") ?? "");
+    const count = String(formData.get("count") ?? "");
+    const message = String(formData.get("message") ?? "").trim();
+
+    const serviceLabel = type === "mesa" ? "Mesa" : "Suite";
+    const dateLabel = type === "mesa" ? "Data" : "Check-in";
+    const countLabel = type === "mesa" ? "Pessoas" : "Noites";
+
+    const lines = [
+      "Ola, gostaria de fazer uma reserva no Mutxutxu.",
+      "",
+      `Tipo: ${serviceLabel}`,
+      `Nome: ${name}`,
+      `Telefone: ${phone}`,
+      `${dateLabel}: ${date}`,
+      `${countLabel}: ${count}`,
+      `Mensagem: ${message || "Sem mensagem adicional"}`,
+    ];
+
+    const text = encodeURIComponent(lines.join("\n"));
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    form.reset();
+    setType("mesa");
+  };
 
   return (
     <>
-      <Toaster theme="dark" position="top-center" />
       <section className="relative pt-40 pb-16 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0 bg-radial-gold opacity-50" />
         <motion.div
@@ -32,7 +69,7 @@ function ContactPage() {
           className="relative mx-auto max-w-4xl text-center"
         >
           <p className="text-xs uppercase tracking-[0.4em] text-primary inline-flex items-center gap-2">
-            <Sparkles className="h-3 w-3" /> Última chamada
+            <Sparkles className="h-3 w-3" /> Ultima chamada
           </p>
           <h1 className="mt-4 font-display text-6xl md:text-8xl">
             <span className="text-shimmer">Reserve</span>
@@ -69,25 +106,15 @@ function ContactPage() {
                   type === "suite" ? "bg-gradient-gold text-primary-foreground shadow-gold" : "text-foreground/70"
                 }`}
               >
-                <BedDouble className="h-4 w-4" /> Suíte
+                <BedDouble className="h-4 w-4" /> Suite
               </button>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("Pedido recebido! Vamos confirmar em instantes.", {
-                  description: "Verifique o seu e-mail nos próximos minutos.",
-                });
-                (e.target as HTMLFormElement).reset();
-              }}
-              className="mt-8 grid gap-5"
-            >
+            <form onSubmit={handleSubmit} className="mt-8 grid gap-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <Field label="Nome completo" name="name" placeholder="O seu nome" required />
                 <Field label="Telefone" name="phone" type="tel" placeholder="+258 ..." required />
               </div>
-              <Field label="E-mail" name="email" type="email" placeholder="email@exemplo.com" required />
               <div className="grid sm:grid-cols-2 gap-5">
                 <Field label={type === "mesa" ? "Data" : "Check-in"} name="date" type="date" required />
                 <Field
@@ -105,7 +132,7 @@ function ContactPage() {
                 <textarea
                   name="message"
                   rows={4}
-                  placeholder="Aniversário, alergias, pedidos especiais..."
+                  placeholder="Aniversario, alergias, pedidos especiais..."
                   className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-all"
                 />
               </div>
@@ -114,11 +141,11 @@ function ContactPage() {
                 type="submit"
                 className="mt-2 group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-medium shadow-gold hover:scale-[1.02] transition-transform animate-pulse-glow"
               >
-                Confirmar reserva
+                Reservar via WhatsApp
                 <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
               <p className="text-xs text-center text-muted-foreground">
-                Resposta garantida em menos de 2 horas. Sem compromisso até confirmação.
+                Voce sera redirecionado para o WhatsApp com os dados preenchidos.
               </p>
             </form>
           </motion.div>
@@ -129,15 +156,15 @@ function ContactPage() {
             viewport={{ once: true }}
             className="lg:col-span-2 space-y-6"
           >
-            <Info icon={MapPin} title="Visite-nos" lines={["Av. Marginal, 1234", "Maputo, Moçambique"]} />
-            <Info icon={Phone} title="Ligue" lines={["+258 84 000 0000", "+258 21 000 000"]} />
-            <Info icon={Mail} title="Escreva" lines={["ola@mutxutxu.co.mz", "reservas@mutxutxu.co.mz"]} />
-            <Info icon={Clock} title="Horários" lines={["Restaurante: 12h–23h", "Recepção: 24h"]} />
+            <Info icon={MapPin} title="Visite-nos" lines={["Bairo massenjere"]} />
+            <Info icon={Phone} title="Ligue" lines={["877810419"]} />
+            <Info icon={Mail} title="Escreva" lines={["mutxutxu@gmail.com"]} />
+            <Info icon={Clock} title="Horarios" lines={["10h as 23h", "Fechado a segunda-feira"]} />
 
             <div className="rounded-2xl p-6 bg-gradient-to-br from-primary/15 to-accent/10 border border-primary/30">
-              <p className="font-display text-2xl text-gold">Última disponibilidade</p>
+              <p className="font-display text-2xl text-gold">Ultima disponibilidade</p>
               <p className="mt-2 text-sm text-foreground/80">
-                Sextas e sábados esgotam com 3 semanas de antecedência. Não deixe para depois.
+                Sextas e sabados esgotam com 3 semanas de antecedencia. Nao deixe para depois.
               </p>
             </div>
           </motion.aside>
