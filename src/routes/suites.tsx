@@ -9,6 +9,7 @@ import bedroom2 from "@/assets/residence-bedroom-2.jpg";
 import bedroom3 from "@/assets/residence-bedroom-3.jpg";
 import wa153425 from "@/assets/WhatsApp Image 2026-05-06 at 15.34.25.jpeg";
 import wa153532 from "@/assets/WhatsApp Image 2026-05-06 at 15.35.32.jpeg";
+import wa154608 from "@/assets/WhatsApp Image 2026-04-28 at 15.46.08.jpeg";
 
 export const Route = createFileRoute("/suites")({
   head: () => ({
@@ -28,7 +29,7 @@ const suites = [
     name: "Suíte Esmeralda",
     tagline: "A mais íntima",
     desc: "Cama king-size, sala de estar privativa com iluminação ambiente esmeralda, kitchenette completa e TV de tela plana. Pensada para quem busca conforto e estilo.",
-    price: "5.000 MT",
+    price: "4.000 MT",
     night: "/noite",
     img: residence1,
     bedroom: bedroom1,
@@ -46,9 +47,9 @@ const suites = [
     name: "Suíte Mutxutxu Master",
     tagline: "A experiência completa",
     desc: "A nossa suíte de assinatura — sala lounge, kitchenette gourmet, quarto principal com cama king, candeeiros dourados, almofadas premium e jantar do chef incluído.",
-    price: "8.000 MT",
+    price: "5.000 MT",
     night: "/noite",
-    img: residence3,
+    img: wa154608,
     bedroom: bedroom3,
   },
   {
