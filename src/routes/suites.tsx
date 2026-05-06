@@ -87,7 +87,7 @@ function SuitesPage() {
           <p className="text-xs uppercase tracking-[0.4em] text-primary">A Residência</p>
           <h1 className="mt-4 font-display text-6xl md:text-8xl">
             <span className="block">Apenas</span>
-            <span className="text-shimmer">9 suítes</span>
+            <span className="text-shimmer">8 suítes</span>
             <span className="block italic font-light text-foreground/95 text-3xl md:text-5xl mt-4">
               para nunca esquecer
             </span>
