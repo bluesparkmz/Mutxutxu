@@ -6,6 +6,7 @@ import dishTilapiaGrelhada from "@/assets/dish-tilapia-grelhada.jpg";
 import dishPrawns from "@/assets/dish-prawns.jpg";
 import dishFish from "@/assets/dish-fish.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
+import dishFrango from "@/assets/dish-frango.jpg";
 import residenceImg from "@/assets/residence-1.jpg";
 import residenceBedroom from "@/assets/residence-bedroom-1.jpg";
 import wa184854 from "@/assets/WhatsApp Image 2026-04-24 at 18.48.54.jpeg";
@@ -150,7 +151,7 @@ function HomePage() {
                 img: residenceBedroom,
                 tag: "Residência",
                 title: "Suítes boutique",
-                desc: "Refúgio de luxo discreto, com vistas que param o tempo. Apenas 8 suítes.",
+                desc: "Refúgio de luxo discreto, com vistas que param o tempo. Apenas 9 suítes.",
                 cta: "Ver Suítes",
                 to: "/suites" as const,
                 icon: BedDouble,
@@ -223,7 +224,7 @@ function HomePage() {
             {[
               { img: dishPrawns, name: "Camarão Piri-Piri", desc: "Grelhado em fogo aberto, arroz de coco e lima.", price: "850 MT" },
               { img: dishFish, name: "Peixe & Matapa", desc: "Filete selado sobre puré de mandioca e folhas de mandioqueira.", price: "780 MT" },
-              { img: dishDessert, name: "Mousse Maracujá", desc: "Chocolate negro 70%, coulis de maracujá, ouro comestível.", price: "320 MT" },
+              { img: dishFrango, name: "Galinha Fumada", desc: "Defumada lentamente — sabor único.", price: "1500 MT" },
             ].map((d, i) => (
               <motion.article
                 key={d.name}
@@ -292,7 +293,7 @@ function HomePage() {
               {[
                 { icon: ChefHat, title: "Chef premiado", desc: "Cozinha autoral com produtos locais selecionados todas as manhãs." },
                 { icon: Wine, title: "Carta exclusiva", desc: "Mais de 120 referências, do Douro ao Cabo, harmonizadas pelo nosso sommelier." },
-                { icon: BedDouble, title: "Apenas 8 suítes", desc: "Privacidade absoluta, atenção ao detalhe e amenities de assinatura." },
+                { icon: BedDouble, title: "Apenas 9 suítes", desc: "Privacidade absoluta, atenção ao detalhe e amenities de assinatura." },
                 { icon: Clock, title: "Estadia + Jantar", desc: "Pacotes especiais com check-in tardio e mesa garantida ao pôr-do-sol." },
               ].map((f, i) => (
                 <motion.div

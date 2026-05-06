@@ -7,14 +7,16 @@ import residence3 from "@/assets/residence-3.jpg";
 import bedroom1 from "@/assets/residence-bedroom-1.jpg";
 import bedroom2 from "@/assets/residence-bedroom-2.jpg";
 import bedroom3 from "@/assets/residence-bedroom-3.jpg";
+import wa153425 from "@/assets/WhatsApp Image 2026-05-06 at 15.34.25.jpeg";
+import wa153532 from "@/assets/WhatsApp Image 2026-05-06 at 15.35.32.jpeg";
 
 export const Route = createFileRoute("/suites")({
   head: () => ({
     meta: [
       { title: "Suítes Boutique — Mutxutxu Residência" },
-      { name: "description", content: "Apenas 8 suítes. Refúgio íntimo, vistas que param o tempo. Reserve a sua estadia no Mutxutxu." },
+      { name: "description", content: "Apenas 9 suítes. Refúgio íntimo, vistas que param o tempo. Reserve a sua estadia no Mutxutxu." },
       { property: "og:title", content: "Suítes Boutique — Mutxutxu" },
-      { property: "og:description", content: "Refúgio de luxo discreto. Apenas 8 suítes — reserve já." },
+      { property: "og:description", content: "Refúgio de luxo discreto. Apenas 9 suítes — reserve já." },
       { property: "og:image", content: bedroom1 },
     ],
   }),
@@ -49,6 +51,15 @@ const suites = [
     img: residence3,
     bedroom: bedroom3,
   },
+  {
+    name: "Suíte Económica",
+    tagline: "Conforto acessível",
+    desc: "Quarto confortável com cama queen-size, área de estar privativa, kitchenette básica e TV. Ideal para estadias curtas.",
+    price: "3.000 MT",
+    night: "/noite",
+    img: wa153425,
+    bedroom: wa153532,
+  },
 ];
 
 const amenities = [
@@ -75,7 +86,7 @@ function SuitesPage() {
           <p className="text-xs uppercase tracking-[0.4em] text-primary">A Residência</p>
           <h1 className="mt-4 font-display text-6xl md:text-8xl">
             <span className="block">Apenas</span>
-            <span className="text-shimmer">8 suítes</span>
+            <span className="text-shimmer">9 suítes</span>
             <span className="block italic font-light text-foreground/95 text-3xl md:text-5xl mt-4">
               para nunca esquecer
             </span>
