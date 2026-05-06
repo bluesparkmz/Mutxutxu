@@ -32,7 +32,7 @@ const sections = [
       { name: "Mutxutxu de Galinha", desc: "A assinatura da casa. Galinha tenra em molho aromático.", price: "200 MT", hot: true },
       { name: "Cabeça de Vaca", desc: "Tradicional, lenta cozedura, sabor profundo.", price: "200 MT" },
       { name: "Dobrada", desc: "Receita clássica, temperos da casa.", price: "200 MT" },
-      { name: "Adrinha", desc: "Petisco da terra, servido bem quente.", price: "250 MT" },
+      { name: "Azinha", desc: "Petisco da terra, servido bem quente.", price: "250 MT" },
       { name: "Cabeça de Peixe", desc: "Fresca, do dia, com tempero local.", price: "200 MT" },
       { name: "Chouriço", desc: "Grelhado, defumado na medida certa.", price: "300 MT" },
       { name: "Worce", desc: "Especialidade da casa.", price: "300 MT" },
