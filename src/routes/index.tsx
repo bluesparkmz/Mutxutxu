@@ -151,7 +151,7 @@ function HomePage() {
                 img: residenceBedroom,
                 tag: "Residência",
                 title: "Suítes boutique",
-                desc: "Refúgio de luxo discreto, com vistas que param o tempo. Apenas 9 suítes.",
+                desc: "Refúgio de luxo discreto, com vistas que param o tempo. Apenas 8 suítes.",
                 cta: "Ver Suítes",
                 to: "/suites" as const,
                 icon: BedDouble,
@@ -293,7 +293,7 @@ function HomePage() {
               {[
                 { icon: ChefHat, title: "Chef premiado", desc: "Cozinha autoral com produtos locais selecionados todas as manhãs." },
                 { icon: Wine, title: "Carta exclusiva", desc: "Mais de 120 referências, do Douro ao Cabo, harmonizadas pelo nosso sommelier." },
-                { icon: BedDouble, title: "Apenas 9 suítes", desc: "Privacidade absoluta, atenção ao detalhe e amenities de assinatura." },
+                { icon: BedDouble, title: "Apenas 8 suítes", desc: "Privacidade absoluta, atenção ao detalhe e amenities de assinatura." },
                 { icon: Clock, title: "Estadia + Jantar", desc: "Pacotes especiais com check-in tardio e mesa garantida ao pôr-do-sol." },
               ].map((f, i) => (
                 <motion.div

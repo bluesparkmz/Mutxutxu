@@ -15,9 +15,9 @@ export const Route = createFileRoute("/suites")({
   head: () => ({
     meta: [
       { title: "Suítes Boutique — Mutxutxu Residência" },
-      { name: "description", content: "Apenas 9 suítes. Refúgio íntimo, vistas que param o tempo. Reserve a sua estadia no Mutxutxu." },
+      { name: "description", content: "Apenas 8 suítes. Refúgio íntimo, vistas que param o tempo. Reserve a sua estadia no Mutxutxu." },
       { property: "og:title", content: "Suítes Boutique — Mutxutxu" },
-      { property: "og:description", content: "Refúgio de luxo discreto. Apenas 9 suítes — reserve já." },
+      { property: "og:description", content: "Refúgio de luxo discreto. Apenas 8 suítes — reserve já." },
       { property: "og:image", content: bedroom1 },
     ],
   }),
