@@ -22,6 +22,12 @@ import dishPeixeLegumes from "@/assets/dish-peixe-legumes.jpg";
 import dishPeixeTrio from "@/assets/dish-peixe-trio.jpg";
 import dishCamaraoSalada from "@/assets/dish-camarao-salada.jpg";
 import dishBacalhau from "@/assets/dish-bacalhau.jpg";
+import imgWa0010 from "@/assets/IMG-20260423-WA0010.jpg";
+import wa184854 from "@/assets/WhatsApp Image 2026-04-24 at 18.48.54.jpeg";
+import wa1546081 from "@/assets/WhatsApp Image 2026-04-28 at 15.46.08 (1).jpeg";
+import wa154608 from "@/assets/WhatsApp Image 2026-04-28 at 15.46.08.jpeg";
+import wa1546091 from "@/assets/WhatsApp Image 2026-04-28 at 15.46.09 (1).jpeg";
+import wa154609 from "@/assets/WhatsApp Image 2026-04-28 at 15.46.09.jpeg";
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
@@ -59,6 +65,12 @@ const items: Item[] = [
   { src: dishPeixeTrio, label: "Trio de Peixes Grelhados", category: "Pratos" },
   { src: dishCamaraoSalada, label: "Camarão Grelhado & Salada Fresca", category: "Pratos" },
   { src: dishBacalhau, label: "Bacalhau Confitado", category: "Pratos" },
+  { src: imgWa0010, label: "Piscina exterior", category: "Residência" },
+  { src: wa184854, label: "Área de piscina", category: "Residência" },
+  { src: wa1546081, label: "Piscina ao ar livre", category: "Residência" },
+  { src: wa154608, label: "Espaço piscina", category: "Residência" },
+  { src: wa1546091, label: "Piscina relaxante", category: "Residência" },
+  { src: wa154609, label: "Área exterior", category: "Residência" },
 ];
 
 const categories = ["Tudo", "Residência", "Restaurante", "Pratos"] as const;
