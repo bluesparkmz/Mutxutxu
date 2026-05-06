@@ -8,6 +8,7 @@ import dishFish from "@/assets/dish-fish.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
 import residenceImg from "@/assets/residence-1.jpg";
 import residenceBedroom from "@/assets/residence-bedroom-1.jpg";
+import wa184854 from "@/assets/WhatsApp Image 2026-04-24 at 18.48.54.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -266,7 +267,7 @@ function HomePage() {
             className="relative"
           >
             <img
-              src={residenceImg}
+              src={wa184854}
               alt="A residência ao entardecer"
               loading="lazy"
               className="rounded-2xl shadow-elegant"
