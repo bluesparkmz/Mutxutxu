@@ -44,7 +44,7 @@ const suites = [
     name: "Suíte Mutxutxu Master",
     tagline: "A experiência completa",
     desc: "A nossa suíte de assinatura — sala lounge, kitchenette gourmet, quarto principal com cama king, candeeiros dourados, almofadas premium e jantar do chef incluído.",
-    price: "8.500 MT",
+    price: "8.000 MT",
     night: "/noite",
     img: residence3,
     bedroom: bedroom3,
